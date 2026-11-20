@@ -80,7 +80,7 @@ h2 {
   grid-template-columns: 9rem 1fr;
   gap: 1.5rem;
   align-items: start;
-  padding-top: 2rem;
+  padding-top: 0;
 }
 
 .intro img {
