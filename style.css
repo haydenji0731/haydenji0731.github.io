@@ -1,0 +1,126 @@
+/* One typeface, one accent colour, one column. */
+
+:root {
+  --bg: #ffffff;
+  --text: #1c1b19;
+  --muted: #6b6862;
+  --rule: #dedbd4;
+  --accent: #2f5d50;
+  --measure: 40rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1918;
+    --text: #e8e5df;
+    --muted: #9a968e;
+    --rule: #3a3835;
+    --accent: #8fc1ae;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+}
+
+header, main, footer {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header: name on the left, plain links on the right. */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+header .name {
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav { display: flex; flex-wrap: wrap; gap: 0 1rem; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--accent); }
+
+/* Links */
+a { color: var(--accent); text-underline-offset: 0.15em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+
+/* Sections */
+section { padding: 1.5rem 0; }
+section + section { border-top: 1px solid var(--rule); }
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+
+/* About: photo beside the bio on wide screens, above it on phones. */
+.intro {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  padding-top: 2rem;
+}
+
+.intro img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.intro p:first-child { margin-top: 0; }
+
+@media (max-width: 34rem) {
+  .intro { grid-template-columns: 1fr; }
+  .intro img { width: 8rem; }
+}
+
+/* Publications */
+.pubs { padding-left: 1.25rem; margin: 0; }
+.pubs li { margin-bottom: 0.75rem; }
+.more { color: var(--muted); font-size: 0.95rem; }
+
+/* Software */
+dl { margin: 0; }
+dt { font-weight: 600; }
+dd { margin: 0 0 0.75rem; color: var(--muted); }
+
+/* Contact links in a row */
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
