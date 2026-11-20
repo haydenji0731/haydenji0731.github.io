@@ -50,7 +50,7 @@ header {
 
 header .name {
   font-weight: normal;
-  font-size: 1.35rem;
+  font-size: 1.35em;
   color: var(--heading);
   text-decoration: none;
 }
@@ -68,7 +68,7 @@ section { padding: 1.5rem 0; }
 section + section { border-top: 1px solid var(--rule); }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: normal;
   color: var(--heading);
   margin: 0 0 0.75rem;
@@ -99,7 +99,7 @@ h2 {
 /* Publications */
 .pubs { padding-left: 1.25rem; margin: 0; }
 .pubs li { margin-bottom: 0.75rem; }
-.more { color: var(--muted); font-size: 0.95rem; }
+.more { color: var(--muted); font-size: 0.95em; }
 
 /* Software */
 dl { margin: 0; }
@@ -120,5 +120,5 @@ footer {
   padding-top: 1rem;
   padding-bottom: 3rem;
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 0.85em;
 }
