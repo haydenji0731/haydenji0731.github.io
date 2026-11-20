@@ -2,7 +2,8 @@
 
 :root {
   --bg: #ffffff;
-  --text: #1c1b19;
+  --text: #444444;
+  --heading: #777777;
   --muted: #6b6862;
   --rule: #dedbd4;
   --accent: #2f5d50;
@@ -20,10 +21,13 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: -0.005em;
+}
+
+h2, header .name {
+  font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 header, main, footer {
@@ -45,9 +49,9 @@ header {
 }
 
 header .name {
-  font-weight: 600;
+  font-weight: normal;
   font-size: 1.35rem;
-  color: var(--text);
+  color: var(--heading);
   text-decoration: none;
 }
 
@@ -64,8 +68,9 @@ section { padding: 1.5rem 0; }
 section + section { border-top: 1px solid var(--rule); }
 
 h2 {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: var(--heading);
   margin: 0 0 0.75rem;
 }
 
@@ -98,7 +103,7 @@ h2 {
 
 /* Software */
 dl { margin: 0; }
-dt { font-weight: 600; }
+dt { font-weight: bold; }
 dd { margin: 0 0 0.75rem; color: var(--muted); }
 
 /* Contact links in a row */
