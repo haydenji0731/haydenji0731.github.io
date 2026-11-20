@@ -9,15 +9,8 @@
   --measure: 40rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1a1918;
-    --text: #e8e5df;
-    --muted: #9a968e;
-    --rule: #3a3835;
-    --accent: #8fc1ae;
-  }
-}
+/* Always light, even when the visitor's computer is in dark mode. */
+:root { color-scheme: light; }
 
 *, *::before, *::after { box-sizing: border-box; }
 
