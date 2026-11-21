@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <link rel="stylesheet" href="/style.css">
+  {% feed_meta %}
+</head>
+<body>
+  <header>
+    <a class="name" href="/">Hyun Joo Ji</a>
+    <nav>
+      <a href="/#about">About</a>
+      <a href="/publications.html">Publications</a>
+      <a href="/blog/"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog</a>
+      <a href="/#software">Software</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+{{ content }}
+  </main>
+
+  <footer>
+    <p>Hand-written HTML, hosted on GitHub Pages.</p>
+  </footer>
+</body>
+</html>

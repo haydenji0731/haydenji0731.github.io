@@ -1,0 +1,17 @@
+---
+layout: default
+title: Blog
+---
+<section>
+  <h2>Blog <a class="feed" href="/blog/feed.xml">RSS</a></h2>
+  <p class="more">Independent experiments, notes and thoughts.</p>
+  {% if site.posts.size > 0 %}
+  <ul class="posts">
+    {% for post in site.posts %}
+    <li><span class="date">{{ post.date | date: "%d %b %Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No posts yet.</p>
+  {% endif %}
+</section>

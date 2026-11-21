@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,6 +15,7 @@
     <nav>
       <a href="#about">About</a>
       <a href="publications.html">Publications</a>
+      <a href="blog/">Blog</a>
       <a href="#software">Software</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -55,6 +58,20 @@
         See <a href="publications.html">all publications</a>, or
         <a href="https://scholar.google.com/citations?user=IJIPB3EAAAAJ&amp;hl=en">Google Scholar</a>.
       </p>
+    </section>
+
+    <section id="blog">
+      <h2>Recent posts</h2>
+      {% if site.posts.size > 0 %}
+      <ul class="posts">
+        {% for post in site.posts limit:5 %}
+        <li><span class="date">{{ post.date | date: "%d %b %Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No posts yet.</p>
+      {% endif %}
+      <p class="more">See <a href="blog/">all posts</a>.</p>
     </section>
 
     <section id="software">

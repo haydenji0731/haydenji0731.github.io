@@ -1,0 +1,17 @@
+title: Hyun Joo Ji
+description: Hyun Joo Ji — personal homepage.
+url: https://haydenji0731.github.io
+
+# Blog posts live in _posts/ as YYYY-MM-DD-title.md
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-feed
+feed:
+  path: blog/feed.xml
+
+exclude:
+  - README.md
