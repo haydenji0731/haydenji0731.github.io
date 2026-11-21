@@ -19,11 +19,13 @@
     </nav>
   </header>
 
-  <div class="page">
+  {% assign home = false %}{% if page.url == '/' or page.url == '/index.html' %}{% assign home = true %}{% endif %}
+  <div class="page{% if home %} has-sidebar{% endif %}">
     <main>
 {{ content }}
     </main>
 
+    {% if home %}
     <aside class="sidebar" id="contact">
       <h3>More links</h3>
       <ul>
@@ -37,6 +39,7 @@
         <li>hji20 [at] jh [dot] edu</li>
       </ul>
     </aside>
+    {% endif %}
   </div>
 
   <footer>
