@@ -193,3 +193,8 @@ h3 {
 .comic { margin: 1.25rem 0 0; }
 .comic img { display: block; width: 100%; max-width: 600px; height: auto; }
 .comic figcaption { color: var(--muted); font-size: 0.85em; margin-top: 0.4rem; }
+
+/* Recent posts in the home-page sidebar */
+.sidebar .side-posts .date { display: block; color: var(--muted); font-size: 0.85em; }
+.sidebar .more { margin: 0.4rem 0 0; }
+.sidebar .more + h3 { margin-top: 1.25rem; }
