@@ -100,26 +100,21 @@ h2 {
   margin: 0 0 0.75rem;
 }
 
-/* About: photo beside the bio on wide screens, above it on phones. */
-.intro {
-  display: grid;
-  grid-template-columns: 9rem 1fr;
-  gap: 1.5rem;
-  align-items: start;
-  padding-top: 0;
-}
+/* About: the bio text wraps around the photo. */
+.intro { display: flow-root; }   /* contains the floated photo */
 
 .intro img {
-  width: 100%;
+  float: left;
+  width: 9rem;
   height: auto;
+  margin: 0.25rem 1.25rem 0.5rem 0;
   border-radius: 4px;
 }
 
 .intro p:first-child { margin-top: 0; }
 
 @media (max-width: 34rem) {
-  .intro { grid-template-columns: 1fr; }
-  .intro img { width: 8rem; }
+  .intro img { width: 7rem; margin-right: 1rem; }
 }
 
 /* Publications */
@@ -194,7 +189,7 @@ h3 {
 }
 .sidebar ul + h3 { margin-top: 1.25rem; }
 
-/* Comic at the bottom of the home page */
-.comic { margin: 0; padding: 1.5rem 0; border-top: 1px solid var(--rule); }
+/* Comic at the bottom of the About section */
+.comic { margin: 1.25rem 0 0; }
 .comic img { display: block; width: 100%; max-width: 600px; height: auto; }
 .comic figcaption { color: var(--muted); font-size: 0.85em; margin-top: 0.4rem; }
