@@ -193,3 +193,8 @@ h3 {
   margin: 1rem 0 0.5rem;
 }
 .sidebar ul + h3 { margin-top: 1.25rem; }
+
+/* Comic at the bottom of the home page */
+.comic { margin: 0; padding: 1.5rem 0; border-top: 1px solid var(--rule); }
+.comic img { display: block; width: 100%; max-width: 600px; height: auto; }
+.comic figcaption { color: var(--muted); font-size: 0.85em; margin-top: 0.4rem; }
