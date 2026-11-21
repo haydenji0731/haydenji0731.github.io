@@ -1,4 +1,4 @@
-/* One typeface, one accent colour, one column. */
+/* One typeface, one accent colour; main column plus a sidebar. */
 
 :root {
   --bg: #ffffff;
@@ -7,7 +7,7 @@
   --muted: #6b6862;
   --rule: #dedbd4;
   --accent: #2f5d50;
-  --measure: 40rem;
+  --measure: 54rem;
 }
 
 /* Always light, even when the visitor's computer is in dark mode. */
@@ -30,10 +30,30 @@ h2, header .name {
   font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
-header, main, footer {
+header, .page, footer {
   max-width: var(--measure);
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+/* Main column on the left, "More about me" sidebar on the right
+   (like liheng.org). On narrow screens the sidebar drops below. */
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 11rem;
+  gap: 2.5rem;
+  align-items: start;
+}
+main { min-width: 0; }
+
+.sidebar { padding-top: 1.5rem; }
+.sidebar h3 { margin-top: 0; }
+.sidebar ul { list-style: none; padding: 0; margin: 0; }
+.sidebar li { margin-bottom: 0.4rem; }
+
+@media (max-width: 44rem) {
+  .page { grid-template-columns: 1fr; gap: 0; }
+  .sidebar { border-top: 1px solid var(--rule); padding-bottom: 1rem; }
 }
 
 /* Header: name on the left, plain links on the right. */

@@ -12,17 +12,29 @@
   <header>
     <a class="name" href="/">Hyun Joo Ji</a>
     <nav>
-      <a href="/#about">About</a>
-      <a href="/publications.html">Publications</a>
+      <a href="/"{% if page.url == '/' %} aria-current="page"{% endif %}>About</a>
+      <a href="/publications.html"{% if page.url == '/publications.html' %} aria-current="page"{% endif %}>Publications</a>
       <a href="/blog/"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog</a>
-      <a href="/software.html">Software</a>
-      <a href="/#contact">Contact</a>
+      <a href="/software.html"{% if page.url == '/software.html' %} aria-current="page"{% endif %}>Software</a>
     </nav>
   </header>
 
-  <main>
+  <div class="page">
+    <main>
 {{ content }}
-  </main>
+    </main>
+
+    <aside class="sidebar" id="contact">
+      <h3>More about me</h3>
+      <ul>
+        <li><a href="https://scholar.google.com/citations?user=IJIPB3EAAAAJ&amp;hl=en">Google Scholar</a></li>
+        <li><a href="https://github.com/haydenji0731">GitHub</a></li>
+        <li><a href="https://orcid.org/0009-0008-4360-5428">ORCID</a></li>
+        <li><a href="#">CV (PDF)</a></li>
+        <li>Email: hji20 [at] jh [dot] edu</li>
+      </ul>
+    </aside>
+  </div>
 
   <footer>
     <p>Hand-written HTML, hosted on GitHub Pages.</p>
