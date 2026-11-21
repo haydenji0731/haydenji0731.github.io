@@ -112,6 +112,7 @@ h2 {
 }
 
 .intro p:first-child { margin-top: 0; }
+.intro p:last-child { margin-bottom: 0; }
 
 @media (max-width: 34rem) {
   .intro img { width: 7rem; margin-right: 1rem; }
@@ -190,7 +191,7 @@ h3 {
 .sidebar ul + h3 { margin-top: 1.25rem; }
 
 /* Comic at the bottom of the About section */
-.comic { margin: 1.25rem 0 0; }
+.comic { margin: 1rem 0 0; }
 .comic img { display: block; width: 100%; max-width: 420px; height: auto; }
 .comic figcaption { color: var(--muted); font-size: 0.85em; margin-top: 0.4rem; }
 
