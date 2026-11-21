@@ -69,8 +69,8 @@ header {
   align-items: baseline;
   justify-content: space-between;
   gap: 0.5rem 1.5rem;
-  padding-top: 2.5rem;
-  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--rule);
 }
 
