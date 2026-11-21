@@ -198,3 +198,4 @@ h3 {
 .sidebar .side-posts .date { display: block; color: var(--muted); font-size: 0.85em; }
 .sidebar .more { margin: 0.4rem 0 0; }
 .sidebar .more + h3 { margin-top: 1.25rem; }
+.comic .comic-note { display: block; color: var(--text); font-size: 1.15em; margin-bottom: 0.15rem; }
