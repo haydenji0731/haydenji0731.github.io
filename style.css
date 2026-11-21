@@ -44,12 +44,12 @@ header, .page, footer {
   align-items: start;
 }
 /* Only the home page has the sidebar. */
-.page.has-sidebar {
+.page:has(> .sidebar) {
   grid-template-columns: minmax(0, 1fr) 11rem;
   gap: 2.5rem;
 }
 /* Other pages keep the same reading width as the home page's main column. */
-.page:not(.has-sidebar) main { max-width: 40rem; }
+.page:not(:has(> .sidebar)) main { max-width: 40rem; }
 main { min-width: 0; }
 
 .sidebar { padding-top: 1.5rem; }
@@ -58,7 +58,7 @@ main { min-width: 0; }
 .sidebar li { margin-bottom: 0.4rem; }
 
 @media (max-width: 44rem) {
-  .page.has-sidebar { grid-template-columns: 1fr; gap: 0; }
+  .page:has(> .sidebar) { grid-template-columns: 1fr; gap: 0; }
   .sidebar { border-top: 1px solid var(--rule); padding-bottom: 1rem; }
 }
 
